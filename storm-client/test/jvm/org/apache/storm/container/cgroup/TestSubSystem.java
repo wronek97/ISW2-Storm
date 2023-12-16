@@ -78,9 +78,9 @@ public class TestSubSystem {
     public void testHashCode() {
         SubSystem sys = new SubSystem(validType, positive, positive, true);
 
-        assertEquals(31*(31 + type.hashCode())+sys.getHierarchyID(), sys.hashCode());
+        assertEquals(31*(31 + validType.hashCode()) + positive, sys.hashCode());
         sys = new SubSystem(null, positive, positive, true);
-        assertEquals(31*31+sys.getHierarchyID(), sys.hashCode());
+        assertEquals(31*31 + positive, sys.hashCode());
     }
 
     @Test
