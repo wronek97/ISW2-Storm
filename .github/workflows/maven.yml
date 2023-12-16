@@ -31,29 +31,29 @@ jobs:
     - name: Test with Maven
       run: mvn package --no-transfer-progress
         
-    #- name: Test with Maven
-    #  run: mvn test -Pstandard-coverage --no-transfer-progress
+    - name: Test with Maven
+      run: mvn test -Pstandard-coverage --no-transfer-progress
 
-    #- name: Save Jacoco Report
-    #  uses: actions/upload-artifact@v3
-    #  with:
-    #    name: 1-Jacoco Report
-    #    path: bookkeeper-server/target/site/jacoco
+    - name: Save Jacoco Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: 1-Jacoco Report
+        path: storm-client/target/site/jacoco
 
-    #- name: Save Pit Report
-    #  uses: actions/upload-artifact@v3
-    #  with:
-    #    name: 2-Pit Report
-    #    path: bookkeeper-server/target/pit-reports
+    - name: Save Pit Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: 2-Pit Report
+        path: storm-client/target/pit-reports
 
-    #- name: Change Permissions for Ba-Dua
-    #  run: chmod +x dfc/report.sh
+    - name: Change Permissions for Ba-Dua
+      run: chmod +x dfc/report.sh
 
-    #- name: Test for Ba-Dua Report
-    #  run: mvn test -Pba-dua-coverage --no-transfer-progress
+    - name: Test for Ba-Dua Report
+      run: mvn test -Pba-dua-coverage --no-transfer-progress
      
-    #- name: Save Ba-Dua Report
-    #  uses: actions/upload-artifact@v3
-    #  with:
-    #    name: 3-Ba-Dua Report
-    #    path: bookkeeper-server/target/badua.xml
+    - name: Save Ba-Dua Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: 3-Ba-Dua Report
+        path: storm-client/target/badua.xml
