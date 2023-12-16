@@ -109,12 +109,12 @@
 
         <!-- test -->
         <!-- __________________________________________ HERE MY WORK STARTS __________________________________________ -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.8.0</version>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <!-- ___________________________________________ HERE MY WORK ENDS ___________________________________________ -->
         <dependency>
             <groupId>org.mockito</groupId>
@@ -307,6 +307,14 @@
                         <groupId>org.pitest</groupId>
                         <artifactId>pitest-maven</artifactId>
                         <version>1.14.1</version>
+                        <!--allows to work with JUnit 5-->
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.pitest</groupId>
+                                <artifactId>pitest-junit5-plugin</artifactId>
+                                <version>1.2.0</version>
+                            </dependency>
+                        </dependencies>
                         <executions>
                             <execution>
                                 <id>pit-report</id>
@@ -316,16 +324,6 @@
                                 </goals>
                             </execution>
                         </executions>
-
-                        <!--allows to work with JUnit 5-->
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.pitest</groupId>
-                                <artifactId>pitest-junit5-plugin</artifactId>
-                                <version>1.2.0</version>
-                            </dependency>
-                        </dependencies>
-
                         <configuration>
                             <timeoutConstant>5000</timeoutConstant>
                             <timeoutFactor>1</timeoutFactor>
