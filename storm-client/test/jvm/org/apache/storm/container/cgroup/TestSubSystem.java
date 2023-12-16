@@ -2,9 +2,12 @@ package org.apache.storm.container.cgroup;
 
 import org.apache.storm.container.cgroup.SubSystem;
 import org.apache.storm.container.cgroup.SubSystemType;
-import org.junit.jupiter.api.Test;
+import org.junit.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.Collection;
