@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 import java.util.Arrays;
 import java.util.Collection;
 
-public class SubSystem {
+public class TestSubSystem {
 
     @Test
     public void testConstructor() {
@@ -40,22 +40,22 @@ public class SubSystem {
     }
 
     @Test
-    public int testGetCgroupsNum() {
+    public void testGetCgroupsNum() {
         assertTrue(true);
     }
 
     @Test
-    public void testSetCgroupsNum(int cgroupsNum) {
+    public void testSetCgroupsNum() {
         assertTrue(true);
     }
 
     @Test
-    public boolean testIsEnable() {
+    public void testIsEnable() {
         assertTrue(true);
     }
 
     @Test
-    public void testSetEnable(boolean enable) {
+    public void testSetEnable() {
         assertTrue(true);
     }
 
@@ -65,7 +65,7 @@ public class SubSystem {
     }
 
     @Test
-    public void testEquals(Object object) {
+    public void testEquals() {
         assertTrue(true);
     }
 }
