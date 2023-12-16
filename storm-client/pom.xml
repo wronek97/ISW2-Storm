@@ -125,7 +125,8 @@
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
+            <artifactId>mockito-inline</artifactId>
+            <version>5.2.0</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -361,7 +362,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.version}</version>
                 <configuration>
-                    <argLine>-javaagent:"../dfc/ba-dua-agent-rt-0.6.0-all.jar"</argLine>
+                    <argLine>-javaagent:"${project.basedir}/dfc/ba-dua-agent-rt-0.6.0-all.jar"</argLine>
                 </configuration>
                 </plugin>
 
