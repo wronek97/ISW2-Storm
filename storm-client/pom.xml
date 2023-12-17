@@ -304,6 +304,15 @@
                                 <goals>
                                     <goal>report</goal>
                                 </goals>
+                                <configuration>
+                                    <rules>
+                                      <rule>
+                                        <includes>
+                                          <include>org.apache.storm.container.cgroup</include>
+                                        </includes>
+                                      </rule>
+                                    </rules>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
