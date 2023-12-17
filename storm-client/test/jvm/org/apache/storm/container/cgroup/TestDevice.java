@@ -110,17 +110,17 @@ public class TestDevice {
         int major = 123;
         int minor = -456;
         Device dev = new Device(major, minor);
-        assertEquals(31 * (31 + major) + minor);
+        assertEquals(31 * (31 + major) + minor, dev.hashCode());
     }
 
     @Test
     public void testEquals() {
         Device dev = new Device(1, -1);
         assertTrue(dev.equals(dev));
-        assertFalse(sys.equals(null));
-        assertFalse(sys.equals(Integer.valueOf(123456)));
-        assertFalse(sys.equals(new Device(1, 0)));
-        assertFalse(sys.equals(new Device(0, -1)));
-        assertTrue(sys.equals(new Device(1, -1)));
+        assertFalse(dev.equals(null));
+        assertFalse(dev.equals(Integer.valueOf(123456)));
+        assertFalse(dev.equals(new Device(1, 0)));
+        assertFalse(dev.equals(new Device(0, -1)));
+        assertTrue(dev.equals(new Device(1, -1)));
     }
 }
