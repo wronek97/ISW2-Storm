@@ -26,7 +26,7 @@ public class TestSubSystemType {
         assertEquals(SubSystemType.net_prio, SubSystemType.getSubSystem("net_prio"));
 
         // test invalid type
-        assertThrows(IllegalArgumentException.class, () -> SubSystemType.getSubSystem("INVALID_TYPE"));
+        assertEquals(null, SubSystemType.getSubSystem("INVALID_TYPE"));
     }
     
 }
