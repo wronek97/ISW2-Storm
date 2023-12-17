@@ -324,10 +324,14 @@
                             <timeoutConstant>5000</timeoutConstant>
                             <timeoutFactor>1</timeoutFactor>
                             <targetClasses>
+                                <param>org.apache.storm.container.cgroup.Device</param>
                                 <param>org.apache.storm.container.cgroup.SubSystem</param>
+                                <param>org.apache.storm.container.cgroup.SubSystemType</param>
                             </targetClasses>
                             <targetTests>
+                                <param>org.apache.storm.container.cgroup.TestDevice</param>
                                 <param>org.apache.storm.container.cgroup.TestSubSystem</param>
+                                <param>org.apache.storm.container.cgroup.TestSubSystemType</param>
                             </targetTests>
                             <avoidCallsTo>
                                 <avoidCallsTo>java.util.logging</avoidCallsTo>
