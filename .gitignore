@@ -16,7 +16,7 @@ NANNY
 .\#project.clj
 .lein-failures
 _release
-*.zip
+#*.zip
 *.tar.gz
 .lein-deps-sum
 target
@@ -47,7 +47,7 @@ logs
 .idea
 
 # Package Files
-*.jar
+#*.jar
 *.war
 *.ear
 
