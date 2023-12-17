@@ -308,8 +308,11 @@
                                     <rules>
                                       <rule>
                                         <includes>
-                                          <include>org.apache.storm.container.cgroup</include>
+                                          <include>org/apache/storm/container/**/*</include>
                                         </includes>
+                                        <excludes>
+                                            <exclude>org/apache/storm/**/*</exclude>
+                                          </excludes>
                                       </rule>
                                     </rules>
                                 </configuration>
