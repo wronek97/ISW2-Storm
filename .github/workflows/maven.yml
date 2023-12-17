@@ -28,20 +28,20 @@ jobs:
         distribution: 'temurin'
         cache: maven
        
-    #- name: Build with Maven
-    #  run: mvn package -Pstandard-coverage --no-transfer-progress
+    - name: Build with Maven
+      run: mvn package -Pstandard-coverage --no-transfer-progress
 
-    #- name: Save Jacoco Report
-    #  uses: actions/upload-artifact@v3
-    #  with:
-    #    name: 1-Jacoco Report
-    #    path: storm-client/target/site/jacoco
+    - name: Save Jacoco Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: 1-Jacoco Report
+        path: storm-client/target/site/jacoco
 
-    #- name: Save Pit Report
-    #  uses: actions/upload-artifact@v3
-    #  with:
-    #    name: 2-Pit Report
-    #    path: storm-client/target/pit-reports
+    - name: Save Pit Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: 2-Pit Report
+        path: storm-client/target/pit-reports
 
     - name: Change Permissions for Ba-Dua
       run: chmod +x dfc/report.sh
