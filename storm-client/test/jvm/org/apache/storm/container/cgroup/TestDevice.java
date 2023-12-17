@@ -68,15 +68,15 @@ public class TestDevice {
         
         // test invalid string
         param = "1";
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> {new Device(param);});
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> new Device(param));
         param = "0:";
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> {new Device(param);});
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> new Device(param));
         param = ":1";
-        assertThrows(NumberFormatException.class, () -> {new Device(param);});
+        assertThrows(NumberFormatException.class, () -> new Device(param));
         param = "no_number";
-        assertThrows(NumberFormatException.class, () -> {new Device(param);});
+        assertThrows(NumberFormatException.class, () -> new Device(param));
         param = "1:char";
-        assertThrows(NumberFormatException.class, () -> {new Device(param);});
+        assertThrows(NumberFormatException.class, () -> new Device(param));
 
     }
 
