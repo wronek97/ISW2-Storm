@@ -305,16 +305,12 @@
                                     <goal>report</goal>
                                 </goals>
                                 <configuration>
-                                    <rules>
-                                      <rule>
-                                        <includes>
-                                          <include>org/apache/storm/container/**/*</include>
-                                        </includes>
-                                        <excludes>
-                                            <exclude>org/apache/storm/**/*</exclude>
-                                          </excludes>
-                                      </rule>
-                                    </rules>
+                                    <includes>
+                                        <include>org/apache/storm/container/**/*</include>
+                                    </includes>
+                                    <excludes>
+                                        <exclude>org/apache/storm/**/*</exclude>
+                                    </excludes>
                                 </configuration>
                             </execution>
                         </executions>
