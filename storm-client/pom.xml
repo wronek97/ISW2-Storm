@@ -308,9 +308,9 @@
                                     <includes>
                                         <include>org/apache/storm/container/**/*</include>
                                     </includes>
-                                    <excludes>
+                                    <!--<excludes>
                                         <exclude>org/apache/storm/**/*</exclude>
-                                    </excludes>
+                                    </excludes>-->
                                 </configuration>
                             </execution>
                         </executions>
