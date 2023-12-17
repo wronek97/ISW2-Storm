@@ -43,14 +43,15 @@ jobs:
         name: 2-Pit Report
         path: storm-client/target/pit-reports
 
-    - name: Change Permissions for Ba-Dua
-      run: chmod +x dfc/report.sh
+    # Ba-Dua doesn't work well with junit5
+    #- name: Change Permissions for Ba-Dua
+    #  run: chmod +x dfc/report.sh
 
-    - name: Build for Ba-Dua Report
-      run: mvn package -Pba-dua-coverage --no-transfer-progress
+    #- name: Build for Ba-Dua Report
+    #  run: mvn package -Pba-dua-coverage --no-transfer-progress
      
-    - name: Save Ba-Dua Report
-      uses: actions/upload-artifact@v3
-      with:
-        name: 3-Ba-Dua Report
-        path: storm-client/target/badua.xml
+    #- name: Save Ba-Dua Report
+    #  uses: actions/upload-artifact@v3
+    #  with:
+    #    name: 3-Ba-Dua Report
+    #    path: storm-client/target/badua.xml
